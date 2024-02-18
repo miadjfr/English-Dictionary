@@ -39,6 +39,11 @@ body{
 
 }
 
+.wrong{
+    color: red;
+    font-size:20px;
+}
+
 
 
 .next p{

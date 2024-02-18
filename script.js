@@ -8,10 +8,14 @@ const pressEnterEl = document.querySelector(".pressEnter")
 const waitingEl = document.querySelector(".waiting")
 const waitingforEl = document.querySelector(".waitingfor")
 const nextEl = document.querySelector(".next")
+const wrongEl = document.querySelector(".wrong")
 
 
 nextEl.style.display = "none"
 waitingEl.style.display = "none"
+wrongEl.style.display = "none"
+
+
 async function patchApi(word){
     const APIUrl = "https://api.dictionaryapi.dev/api/v2/entries/en/"
 
@@ -22,14 +26,24 @@ async function patchApi(word){
     waitingforEl.innerText = word
 
 
+    if (response.title) {
+        waitingEl.style.display = "none"
+        nextEl.style.display = "block"
+        englishWordEl.innerText = word;
+        typeEl.innerText = "N/A"
+        meaningEl.innerText = "N/A";
+        audioEl.style.display= "none"
+        wrongEl.style.display = "block"
 
+
+    } else {
     englishWordEl.innerText = response[0].word
     typeEl.innerText = response[0].meanings[0].partOfSpeech
 
     meaningEl.innerText = response[0].meanings[0].definitions[0].definition
     audioEl.src= response[0].phonetics[0].audio || response[0].phonetics[1].audio
     waitingEl.style.display = "none"
-    nextEl.style.display = "block"
+    nextEl.style.display = "block"}
 
 }
 
