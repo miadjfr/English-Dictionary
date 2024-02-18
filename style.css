@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background: linear-gradient(to right top , #b814f9 ,#1f86ed ,#0ee6b4);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+.continer{
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px #38383892;
+    text-align: center;
+
+}
+.heading{
+
+}
