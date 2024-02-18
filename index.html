@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>English Dictionary</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
 </head>
+
 <body>
-
     <div class="continer">
-        <h1 class="heading">English To Persian</h1>
-        <input type="text" class="input">
-        <p>Word Title : <span class="englishWord"></span></p>
-        <p>Word Title : <span class="persianWord"></span></p>
-        <audio src="" controls></audio>
+        <h1 class="heading">English Dictionary</h1>
+        <input placeholder="serach a word ..." type="text" class="input" id="input" />
+        <div class="first" id="first">
+            <p class="pressEnter">Type a word and press enter</p>
+            <p class="waiting">Searching For "<span class="waitingfor"></span>"</p>
+        </div>
+        <div class="next" id="next">
+            <p>
+                Word Title :
+                <span class="englishWord" id="englishWord"></span>
+            </p>
+            <p>Type of word : <span class="type" id="type"></span></p>
+            <p>Meaning : <span class="meaning" id="meaning"></span></p>
+            <audio src="" controls class="audio" id="audio"></audio>
+        </div>
     </div>
-
 
     <script src="./script.js"></script>
 </body>
+
 </html>
